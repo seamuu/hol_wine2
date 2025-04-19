@@ -289,7 +289,11 @@ with tab2:
         title="How Much People Would Pay vs How Much They Liked It",
         xaxis_title="Rating (1–10)",
         yaxis_title="Price (€)",
+        dragmode=False,
+        xaxis_fixedrange=True,
+        yaxis_fixedrange=True,
     )
+
 
     st.plotly_chart(fig, use_container_width=True)
 
@@ -340,7 +344,10 @@ with tab2:
     fig.update_layout(
         xaxis_title="Rating (1–10)",
         yaxis_title="Price (€)",
-        height=600
+        height=600,
+        dragmode=False,
+        xaxis_fixedrange=True,
+        yaxis_fixedrange=True,
     )
 
     st.plotly_chart(fig, use_container_width=True)
