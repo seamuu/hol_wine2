@@ -13,14 +13,11 @@ import google.generativeai as genai
 # --------------------------------------------
 #            GOOGLE SHEETS SETUP
 # --------------------------------------------
-SHEET_NAME = "hol_wine_tasting"  # Replace if your sheet is named differently
+SHEET_NAME = "hol_wine_tasting"
+
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 creds_dict = st.secrets["gcp_service_account"]
 credentials = ServiceAccountCredentials.from_json_keyfile_dict(dict(creds_dict), scope)
-
-
-# Set up scope and authorize gspread
-scope = ["https://spreadsheets.google.com/feeds",
-         "https://www.googleapis.com/auth/drive"]
 gc = gspread.authorize(credentials)
 sheet = gc.open(SHEET_NAME).sheet1
 
