@@ -135,7 +135,7 @@ with tab1:
         col1, col2 = st.columns([1, 1])
         with col1:
             name_options = ["Seamus", "Aleks", "Beth", "Becky",
-                            "Ella", "Hannah", "Knut", "Moon"
+                            "Ella", "Hannah", "Knut", "Moon",
                             "Jack", "Maria", "Guro", "Chris",
                             "Luke", "Olwyn"]  # or load dynamically
             name = st.selectbox("Select Your Name", name_options, key="user_name_input")
